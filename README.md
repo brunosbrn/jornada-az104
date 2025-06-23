@@ -9,7 +9,7 @@ Este guia detalha o processo completo realizado para implantar uma máquina virt
 - Região: **East US**
 - Zonas de disponibilidade: 2 zonas
 - Imagem: **Windows Server 2019 Datacenter - x64 Gen2**
-- Tamanho: `Standard_D2s_v3`
+- Tamanho: `Standard_D2s_v6`
 - Disco do SO: **SSD Premium com redundância local (LRS)**
 - Usuário administrador: `localadmin`
 - Senha: gerada aleatoriamente e forte
@@ -57,7 +57,7 @@ Este guia detalha o processo completo realizado para implantar uma máquina virt
 - **Região**: East US
 - **Zona de disponibilidade**: selecione **Zona 1** e **Zona 2**
 - **Imagem**: Windows Server 2019 Datacenter - Gen2
-- **Tamanho**: `Standard_D2s_v3` (2 vCPU, 8 GB RAM)
+- **Tamanho**: `Standard_D2ls_v6` (2 vCPU, 8 GB RAM)
 - **Usuário administrador**: `localadmin`
 - **Senha**: Exemplo forte: Mv1!Secure#P@ss987
 - **Portas de entrada pública**: Nenhuma
@@ -117,13 +117,13 @@ Clique em **Próximo** até **Revisar + Criar**
 
 ## 🔄 Etapa 5 – Alterar o Tamanho da VM (Família)
 
-Caso você queira alterar a VM para a família `Standard_DS1_v2`, siga os passos abaixo:
+Caso você queira alterar a VM para a família `Standard_D2s_v6`, siga os passos abaixo:
 
 1. Acesse o **Portal do Azure**
 2. Navegue até **Máquinas Virtuais > az104-vm1**
 3. **Pare a VM** clicando em **“Parar”**
 4. Após parar, vá em **"Tamanho"** no menu lateral da VM
-5. Selecione **`Standard_DS1_v2`**
+5. Selecione **`Standard_D2s_v6`**
  - 1 vCPU, 3.5 GB RAM, compatível com SSD Premium
 6. Clique em **"Redimensionar"**
 7. Após o redimensionamento, clique em **"Iniciar"** para ligar a VM novamente
@@ -217,7 +217,7 @@ Monitore o uso de créditos acessando:
 | Imagem               | Win 2019 Gen2  | -        | x64, Datacenter                         |
 | Disco do SO          | Premium SSD    | -        | Redundância Local (LRS)                 |
 | Disco de Dados       | `vm1-disk1`    | -        | 32 GB, Standard HDD                     |
-| Tamanho da VM        | `Standard_DS1_v2` | -      | Após redimensionamento                  |
+| Tamanho da VM        | `Standard_D2ls_v6` | -      | Após redimensionamento                  |
 | Usuário da VM        | `localadmin`   | -        | Senha forte gerada                      |
 | Rede Virtual (VNet)  | `az104-vnet`   | East US  | Endereço 10.0.0.0/16                    |
 | Sub-rede             | `default`      | -        | Endereço 10.0.0.0/24                    |
